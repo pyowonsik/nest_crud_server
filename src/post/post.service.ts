@@ -58,10 +58,10 @@ export class PostService {
 
   async update(id: number, updatePostDto: UpdatePostDto) {
 
-    // 코드 리팩토링 
+    // update 정리
     // 1. post가 존재하는지 찾는다.
     // 2. updatePostDto를 userId , ...{title,content}(updatePost)를 분리
-    // 3. userId가 있다면 user를 찾은후 , (1)에서 찾은 post의 user에 저장.
+    // 3. userId가 있다면 user를 찾은후 , (1)에서 찾은 post의 user에 저장. -> post를 저장할때 user 객체가 필요함
     // 4. id(post)를 ...{title,content}(updatePost) , user : post.user로 저장.
     // 5. update된 새로운 post를 return;
     
