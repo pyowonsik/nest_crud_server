@@ -14,6 +14,8 @@ import { User } from './user/entities/user.entity';
 import { Profile } from './user/entities/profile';
 import { PostModule } from './post/post.module';
 import { Post } from './post/entities/post.entity';
+import { ProductModule } from './product/product.module';
+import { Product } from './product/entities/product.entity';
 
 @Module({
   imports: [
@@ -48,7 +50,8 @@ import { Post } from './post/entities/post.entity';
           Genre,
           User,
           Profile,
-          Post
+          Post,
+          Product
         ],
         synchronize: true,
       }),
@@ -58,7 +61,8 @@ import { Post } from './post/entities/post.entity';
     DirectorModule,
     GenreModule,
     UserModule,
-    PostModule
+    PostModule,
+    ProductModule
   ],
 })
 export class AppModule {}
