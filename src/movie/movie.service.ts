@@ -122,7 +122,6 @@ export class MovieService {
       movie.genres = genreEntities;
     }
     
-    console.log(movieRest);
     // 영화 기본 정보 업데이트
     Object.assign(movie, movieRest);
 

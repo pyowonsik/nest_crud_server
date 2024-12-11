@@ -9,6 +9,11 @@ import { DirectorModule } from './director/director.module';
 import { Director } from './director/entities/director.entity';
 import { GenreModule } from './genre/genre.module';
 import { Genre } from './genre/entities/genre.entity';
+import { UserModule } from './user/user.module';
+import { User } from './user/entities/user.entity';
+import { Profile } from './user/entities/profile';
+import { PostModule } from './post/post.module';
+import { Post } from './post/entities/post.entity';
 
 @Module({
   imports: [
@@ -40,7 +45,10 @@ import { Genre } from './genre/entities/genre.entity';
           Movie,
           MovieDetail,
           Director,
-          Genre
+          Genre,
+          User,
+          Profile,
+          Post
         ],
         synchronize: true,
       }),
@@ -49,6 +57,8 @@ import { Genre } from './genre/entities/genre.entity';
     MovieModule,
     DirectorModule,
     GenreModule,
+    UserModule,
+    PostModule
   ],
 })
 export class AppModule {}
